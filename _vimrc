@@ -1,10 +1,29 @@
 syntax on
+
 set nu
 set rnu
 set belloff=all
 set backspace=2
 colorscheme solarized8_dark
-set guifont=consolas:h13 
+set guifont=consolas:h13
+set encoding=utf-8
+
+"Set up for vundle
+set nocompatible
+filetype off
+
+set rtp+=f:/vim/vim82/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+call vundle#end()
+
+"Vim airline setup
+let g:airline#extensions#tabline#enabled=1
+
+
+filetype plugin indent on
 
 filetype indent on
 
