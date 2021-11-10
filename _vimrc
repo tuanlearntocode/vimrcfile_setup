@@ -7,6 +7,8 @@ set backspace=2
 colorscheme solarized8_dark
 set guifont=consolas:h13
 set encoding=utf-8
+set writebackup
+set nobackup
 
 "Set up for vundle
 set nocompatible
@@ -17,10 +19,10 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
-call vundle#end()
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 
-"Vim airline setup
-let g:airline#extensions#tabline#enabled=1
+call vundle#end()
 
 
 filetype plugin indent on
@@ -42,3 +44,23 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+let mapleader=","
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source%<cr>
+nnoremap <leader>g :PluginInstall<cr>
+
+"start NERDTree when vim starts
+autocmd VimEnter * NERDTree | wincmd p
+"open NERDTree
+nnoremap <c-n> :NERDTree<cr>
+"find in NERDTree
+nnoremap <leader>f :NERDTreeFind<cr>
+"change arrow in tree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+"Vim airline setup
+let g:airline#extensions#tabline#enabled=1
+
+
