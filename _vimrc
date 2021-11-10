@@ -4,7 +4,7 @@ set rnu
 set belloff=all
 set backspace=2
 colorscheme solarized8_dark
-set guifont=consolas 
+set guifont=consolas:h13 
 
 filetype indent on
 
@@ -23,7 +23,3 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-
-
-
