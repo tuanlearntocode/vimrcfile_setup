@@ -19,6 +19,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 
@@ -74,3 +75,8 @@ let g:kite_supported_languages=['*']
 "moving tab
 nnoremap <left> :tabn<cr>
 nnoremap <right> :tabp<cr>
+
+"vim airline setup
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline#enxtensions#tabline#formatter='unique_tail_improved'
