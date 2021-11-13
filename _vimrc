@@ -53,14 +53,24 @@ nnoremap <leader>g :PluginInstall<cr>
 "start NERDTree when vim starts
 autocmd VimEnter * NERDTree | wincmd p
 "open NERDTree
-nnoremap <c-n> :NERDTree<cr>
+nnoremap <c-f> :NERDTree<cr>
 "find in NERDTree
 nnoremap <leader>f :NERDTreeFind<cr>
 "change arrow in tree
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '->'
+let g:NERDTreeDirArrowCollapsible = '-'
 
 "Vim airline setup
 let g:airline#extensions#tabline#enabled=1
 
+"auto completion
+"vim default 
+	"<c-n>: top down
+	"<c-p>: down top
 
+"Kite engine 
+let g:kite_supported_languages=['*']
+
+"moving tab
+nnoremap <left> :tabn<cr>
+nnoremap <right> :tabp<cr>
