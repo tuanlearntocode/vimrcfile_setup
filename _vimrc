@@ -4,11 +4,11 @@ set nu
 set rnu
 set belloff=all
 set backspace=2
-colorscheme solarized8_dark
-set guifont=consolas:h13
-set encoding=utf-8
+colorscheme molokai 
+set guifont=firacode\ NF:h13
 set writebackup
 set nobackup
+set encoding=utf-8
 
 "Set up for vundle
 set nocompatible
@@ -22,7 +22,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tomasr/molokai'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'junegunn/fzf',{'do':{->fzf#install()}}
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 
@@ -61,9 +66,6 @@ nnoremap <leader>f :NERDTreeFind<cr>
 let g:NERDTreeDirArrowExpandable = '->'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-"Vim airline setup
-let g:airline#extensions#tabline#enabled=1
-
 "auto completion
 "vim default 
 	"<c-n>: top down
@@ -80,3 +82,8 @@ nnoremap <right> :tabp<cr>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = '>'
 let g:airline#enxtensions#tabline#formatter='unique_tail_improved'
+let g:airline_theme='simple'
+
+"setting for fzf
+nnoremap <leader>f :FZF<space>
+"setting for emmet
